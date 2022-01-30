@@ -1,26 +1,13 @@
 # https://github.com/Ali-CFD-Alex
-class bcolors:
-    BLUE = '\033[94m'
-    ENDC = '\033[0m'
-print(f"{bcolors.BLUE}Matn vared konid : {bcolors.ENDC}")
-
-# daryaft payam
-m=input()
-# Daryaft DLE
+def byteUnstuffing(flagbyte, escapebyte, payload):
+    x = payload.replace(escapebyte*2, escapebyte)
+    y = escapebyte+flagbyte
+    return x.replace(y,'')
+print("Byte vared konid (a-zA-Z) : ")
+Byte=input().upper()
 print("DLE vared konid : ")
-dle = input()
-# Daryaft STX
-print("STX vared konid : ")
-stx = input()
-# Daryaft ETX
-print("ETX vared konid : ")
-etx = input()
-# Hazf khod matn DLE agar dar payam vojod dashte bashad
-m=m.replace(dle+dle, dle)
-# Hazf kardan DLE STX be aval payam
-m = m.replace(dle+stx,"")
-# Hazf kardan DLE ETX be akhar payam
-m = m.replace(dle+etx,"")
-
-# Namayesh
-print("{} {}".format("Stuffing Message :",m))
+DLE = input().upper()
+print("Flag vared konid (stx-etx) : ")
+Flag = input().upper()
+output = byteUnstuffing(Flag,DLE,Byte)
+print("{} {}".format("Untuffing Message :",output))

@@ -1,10 +1,4 @@
 # https://github.com/Ali-CFD-Alex
-class bcolors:
-    BLUE = '\033[94m'
-    ENDC = '\033[0m'
-print(f"{bcolors.BLUE}Matni ke tavasot ferestande ijad shode ast ra copy konid !{bcolors.ENDC}")
-
-
 data=input("Matn ra vared konid : ")
 # i baraye ijad halghe
 i=0

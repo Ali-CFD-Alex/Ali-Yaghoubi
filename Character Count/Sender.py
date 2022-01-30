@@ -1,9 +1,4 @@
 # https://github.com/Ali-CFD-Alex
-class bcolors:
-    BLUE = '\033[94m'
-    ENDC = '\033[0m'
-print(f"{bcolors.BLUE}Ebteda Tedad Frame ha va sepas mohtavaye frame ra type konid !{bcolors.ENDC}")
-
 # daryaft tedad frame ha baraye ijad arraye
 n=int(input("Tedad Frame ha (int) : "))
 l=[]
